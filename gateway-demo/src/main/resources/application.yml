@@ -1,0 +1,37 @@
+dubbo:
+  application:
+    name: gateway
+    owner: gateway
+  registry:
+    address: zookeeper://127.0.0.1:2181
+    timeout: 5000
+    client: curator
+server:
+  port: 8081
+
+logging:
+  level:
+    com.aurora.gateway: debug
+    com.alibaba.dubbo: info
+
+aurora:
+  gateway:
+    open: true
+    register:
+      nacos:
+        group: gateway
+        server-addr: localhost:8848
+        timeout-ms: 3000
+    root-path:
+      list:
+        - /service
+    cors:
+      enabled: true
+    rate-limit:
+      enabled: true
+    demote:
+      enabled: true
+    circuit-breaker:
+      enabled: true
+      bucket-nums: 32
+      time-interval: 100

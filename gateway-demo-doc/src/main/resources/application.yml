@@ -1,0 +1,23 @@
+dubbo:
+  application:
+    name: gateway
+    owner: gateway
+  registry:
+    address: zookeeper://127.0.0.1:2181
+    timeout: 5000
+    client: curator
+server:
+  port: 8081
+
+logging:
+  level:
+    com.aurora.gateway: debug
+    com.alibaba.dubbo: info
+
+aurora:
+  gateway:
+    doc:
+      scan-package:
+        - com.aurora.gateway.demo
+      enabled: true
+      app-name: demo-doc
