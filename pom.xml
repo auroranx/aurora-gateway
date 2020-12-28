@@ -6,10 +6,10 @@
     <modules>
         <module>gateway-core</module>
         <module>gateway-demo</module>
+        <module>gateway-demo-doc</module>
         <module>gateway-doc</module>
         <module>gateway-register</module>
         <module>gateway-webfilter</module>
-        <module>gateway-demo-doc</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -18,9 +18,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.aurora</groupId>
-    <artifactId>gateway</artifactId>
+    <artifactId>aurora-gateway</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>gateway</name>
+    <name>aurora-gateway</name>
     <description>开放网关</description>
 
     <properties>
@@ -110,14 +110,6 @@
                 <artifactId>gateway-core</artifactId>
                 <version>${project.version}</version>
             </dependency>
-            <dependency>
-                <groupId>com.aurora</groupId>
-                <artifactId>gateway-circuit-breaker</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-
-
-
 
             <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
             <dependency>
